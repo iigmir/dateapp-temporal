@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: "docs",
   },
-  publicDir: "/dateapp-temporal"
+  base: "/dateapp-temporal"
 })
