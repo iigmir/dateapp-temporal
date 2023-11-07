@@ -57,10 +57,10 @@ TableRow.propTypes = {
 
 function TheTable({ timezones, currentDate }) {
     return <table className="the-table">
-        <thead>
+        <thead className="table-head">
             <TableHead />
         </thead>
-        <tbody>
+        <tbody className="table-body">
             {timezones.map((item) => <TableRow item={item} key={item.code} currentDate={currentDate} />)}
         </tbody>
     </table>;

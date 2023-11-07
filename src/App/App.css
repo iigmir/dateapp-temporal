@@ -1,4 +1,8 @@
 /* Layout */
+.main p {
+    margin: 0;
+}
+
 .main {
     .container {
         max-width: 720px;
@@ -7,18 +11,16 @@
         .the-table {
             width: 100%;
             margin: 1rem auto;
-            thead tr th {
+            .table-head tr th {
                 padding: 1rem;
             }
-            tbody td {
+            .table-body td {
                 padding: 0.5rem 0;
-            }
-            p {
-                margin: 0;
             }
         }
     }
 }
+
 
 /* Stylings */
 .main {
@@ -49,21 +51,21 @@ body {
     .main-title {
         color: var(--highlight-colour);
     }
-    table.the-table {
-        thead th {
+    .the-table {
+        .table-head th {
             color: var(--surface-colour);
         }
-        tbody {
+        .table-body {
             /* Day & Night colour */
             --day-background: #FFFFFF;
             --day-text: #000000;
             --night-background: #000000;
             --night-text: #FFFFFF;
-            tr.day {
+            .day {
                 background-color: var(--day-background);
                 color: var(--day-text);
             }
-            tr.night {
+            .night {
                 background-color: var(--night-background);
                 color: var(--night-text);
             }
