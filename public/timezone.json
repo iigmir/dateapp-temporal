@@ -1,0 +1,6 @@
+[
+    { "code": "Asia/Taipei", "place": "Taipei" },
+    { "code": "Etc/UTC", "place": "UTC" },
+    { "code": "Australia/Sydney", "place": "Sydney" },
+    { "code": "America/Los_Angeles", "place": "Los Angeles" }
+]

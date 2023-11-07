@@ -1,0 +1,72 @@
+/* Layout */
+.main {
+    .container {
+        max-width: 720px;
+        margin: 1rem auto;
+        text-align: center;
+        .the-table {
+            width: 100%;
+            margin: 1rem auto;
+            thead tr th {
+                padding: 1rem;
+            }
+            tbody td {
+                padding: 0.5rem 0;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+/* Stylings */
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+    .the-table {
+        .place {
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+        .date {
+            font-size: 0.8rem;
+        }
+        .time {
+            font-size: 2rem;
+        }
+    }
+}
+
+/* Colour */
+/* https://colorhunt.co/palette/fff2d8ead7bbbca37f113946 */
+body {
+    --primary-colour: #BCA37F;
+    --secondary-colour: #EAD7BB;
+    --surface-colour: #FFF2D8;
+    --highlight-colour: #113946;
+    
+    background-color: var(--primary-colour);
+    .main-title {
+        color: var(--highlight-colour);
+    }
+    table.the-table {
+        thead th {
+            color: var(--surface-colour);
+        }
+        tbody {
+            /* Day & Night colour */
+            --day-background: #FFFFFF;
+            --day-text: #000000;
+            --night-background: #000000;
+            --night-text: #FFFFFF;
+            tr.day {
+                background-color: var(--day-background);
+                color: var(--day-text);
+            }
+            tr.night {
+                background-color: var(--night-background);
+                color: var(--night-text);
+            }
+        }
+    }
+}
