@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { Temporal } from "temporal-polyfill";
 import { TheTable } from "./TheTable";
 import "./App.css";
@@ -6,14 +6,14 @@ import "./App.css";
 export default function App() {
     const [timezones, set_timezones] = useState([]);
     const [current_date, set_current_date] = useState( Temporal.Now.zonedDateTimeISO() );
-    useLayoutEffect(() => {
+    useEffect(() => {
         fetch( "./timezone.json" ).then( r => r.json() ).then( r => {
             set_timezones(r);
         });
-        const interval_hook = window.setInterval( () => {
+        window.setInterval( () => {
             set_current_date( Temporal.Now.zonedDateTimeISO() );
         }, 1000);
-        return () => window.setInterval(interval_hook);
+        return () => {};
     }, []);
     
     return (<main className="main">
